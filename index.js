@@ -17,7 +17,7 @@ client.on("ready", async () => {
     fs.writeFileSync('links.json', jsonLink);
     const embed = new Discord.MessageEmbed()
     .setColor("#ff4fa7")
-    .setAuthor("Youtube Notification", client.user.avatarURL(), "https://github.com/amistaa/youtube-notification")
+    .setAuthor("Youtube Notification", "https://lh3.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc", "https://github.com/amistaa/youtube-notification")
     .addField("**Title**", feed.items[0].media_group.media_title)
     .addField("**Likes Count**", feed.items[1].media_group.media_community.media_starRating_count, true)
     .addField("**Likes Average**", feed.items[1].media_group.media_community.media_starRating_average, true)
