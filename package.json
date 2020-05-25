@@ -1,0 +1,26 @@
+{
+  "name": "discord-youtube-notification",
+  "version": "1.0.0",
+  "description": "Youtube notification with awesome embed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/amistaa/discord-youtube-notification.git"
+  },
+  "keywords": [
+    "discord",
+    "youtube",
+    "bot",
+    "discordbot",
+    "javascript"
+  ],
+  "author": "Amista",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amistaa/discord-youtube-notification/issues"
+  },
+  "homepage": "https://github.com/amistaa/discord-youtube-notification#readme"
+}
