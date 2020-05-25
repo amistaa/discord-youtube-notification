@@ -6,9 +6,10 @@ const links = require('./links.json');
 const client = new Discord.Client();
 
 client.on("ready", async () => {
-    setInterval(() => {
+    console.log("Login");
+    setInterval(async () => {
     let feed = await rss.toJson('https://www.youtube.com/feeds/videos.xml?channel_id=' + config.channel_yt);
-    if(links.includes(feed.items[0].yt_videoId) return
+    if (links.includes(feed.items[0].yt_videoId)) return;
     let jsonOpen = fs.readFileSync('links.json');
     let json = JSON.parse(jsonOpen);
     json.push(feed.items[0].yt_videoId);
@@ -24,7 +25,6 @@ client.on("ready", async () => {
     .addField("**Description**", feed.items[0].media_group.media_description)
     .setImage(feed.items[0].media_group.media_thumbnail_url)
     client.channel.cache.get(config.channel_id).send(`Hello! **${feed.author.name}** just uploaded a video **${feed.items[0].title}**!\n\nhttps://www.youtube.com/watch?v=${feed.items[0].yt_videoId}` + embed)
-    console.log(feed.items[0].media_group.media_description);
-    }, 3600000);
+    }, 7000);
 })
 client.login(config.token);
