@@ -5,7 +5,7 @@ const config = require('./config.json');
 const client = new Discord.Client();
 
 client.on("ready", async () => {
-    console.log("Login");
+    console.log("Amista is cool uwu.");
     setInterval(async () => {
     let feed = await rss.toJson('https://www.youtube.com/feeds/videos.xml?channel_id=' + config.channel_yt);
     let jsonOpen = fs.readFileSync('links.json');
