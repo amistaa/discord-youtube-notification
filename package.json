@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+ssh://git@github.com/amistaa/discord-youtube-notification.git"
   },
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "fs": "^0.0.2",
+    "rss-converter": "^1.1.6"
+  },
   "keywords": [
     "discord",
     "youtube",
