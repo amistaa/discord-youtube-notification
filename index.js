@@ -24,7 +24,7 @@ client.on("ready", async () => {
     .addField("**Views**", feed.items[1].media_group.media_community.media_statistics_views, true)
     .addField("**Description**", feed.items[0].media_group.media_description)
     .setImage(feed.items[0].media_group.media_thumbnail_url)
-    client.channel.cache.get(config.channel_id).send(`Hello! **${feed.author.name}** just uploaded a video **${feed.items[0].title}**!\n\nhttps://www.youtube.com/watch?v=${feed.items[0].yt_videoId}` + embed)
+    client.channels.cache.get(config.channel_id).send(`Hello! **${feed.author.name}** just uploaded a video **${feed.items[0].title}**!\n\nhttps://www.youtube.com/watch?v=${feed.items[0].yt_videoId}` + embed)
     }, 7000);
 })
 client.login(config.token);
