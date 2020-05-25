@@ -17,14 +17,14 @@ client.on("ready", async () => {
     fs.writeFileSync('links.json', jsonLink);
     const embed = new Discord.MessageEmbed()
     .setColor("#ff4fa7")
-    .setAuthor("Youtube Notification", "https://lh3.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc", "https://github.com/amistaa/youtube-notification")
+    .setAuthor("Youtube Notification", "https://img2.pngdownload.id/20180701/ori/kisspng-youtube-computer-icons-logo-clip-art-5b3871d0eaddb7.296285981530425808962.jpg", "https://github.com/amistaa/youtube-notification")
     .addField("**Title**", feed.items[0].media_group.media_title)
     .addField("**Likes Count**", feed.items[1].media_group.media_community.media_starRating_count, true)
     .addField("**Likes Average**", feed.items[1].media_group.media_community.media_starRating_average, true)
     .addField("**Views**", feed.items[1].media_group.media_community.media_statistics_views, true)
     .addField("**Description**", feed.items[0].media_group.media_description)
     .setImage(feed.items[0].media_group.media_thumbnail_url)
-    client.channels.cache.get(config.channel_id).send(`Hello! **${feed.author.name}** just uploaded a video **${feed.items[0].title}**!\n\nhttps://www.youtube.com/watch?v=${feed.items[0].yt_videoId}` + embed)
+    client.channels.cache.get(config.channel_id).send(`Hello! **${feed.author.name}** just uploaded a video **${feed.items[0].title}**!\n\nhttps://www.youtube.com/watch?v=${feed.items[0].yt_videoId}`, embed)
     }, 7000);
 })
 client.login(config.token);
