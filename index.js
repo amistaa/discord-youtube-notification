@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const rss = require('rss-converter');
-const config = require('./config.json);
+const config = require('./config.json');
 const links = require('./links.json');
 const client = new Discord.Client();
 
