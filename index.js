@@ -10,7 +10,7 @@ client.on("ready", async () => {
     let feed = await rss.toJson('https://www.youtube.com/feeds/videos.xml?channel_id=' + config.channel_yt);
     let jsonOpen = fs.readFileSync('links.json');
     let json = JSON.parse(jsonOpen);
-    if (links.includes(feed.items[0].yt_videoId)) return;
+    if (jsonOpen.includes(feed.items[0].yt_videoId)) return;
     json.push(feed.items[0].yt_videoId);
     let jsonLink = JSON.stringify(json);
     fs.writeFileSync('links.json', jsonLink);
