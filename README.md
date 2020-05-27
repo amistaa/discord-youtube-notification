@@ -1,6 +1,5 @@
 # WIP
 
-Go to config.json
-Change token, channel id discord, channel youtube id.
+Go to `config.json`! Change token, channel id discord and channel youtube id.
 
 ktnxbye.
