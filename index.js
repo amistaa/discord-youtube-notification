@@ -24,6 +24,6 @@ client.on("ready", async () => {
     .addField("**Description**", feed.items[0].media_group.media_description)
     .setImage(feed.items[0].media_group.media_thumbnail_url)
     client.channels.cache.get(config.channel_id).send(`Hello! **${feed.author.name}** just uploaded a video **${feed.items[0].title}**!\n\nhttps://www.youtube.com/watch?v=${feed.items[0].yt_videoId}`, embed)
-    }, 1800000);
+    }, 60000);
 })
 client.login(config.token);
